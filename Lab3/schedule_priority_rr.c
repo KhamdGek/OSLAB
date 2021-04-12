@@ -61,7 +61,6 @@ if (head == NULL) {
     	  
 	  while(1) {
     
-	 	  
       if ((new -> task -> priority > current -> next -> task -> priority) ) {
 	  
 	  if (new->task->priority < current->task->priority) {
