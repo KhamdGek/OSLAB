@@ -1,0 +1,49 @@
+T1-T2
+
+
+pass T1 and burst time into run
+head points to T2
+
+if ( bursttime > quantum) then 
+ending connects to T1
+connect T1 to null
+T1bursttime = 1 
+end 
+
+
+
+T2-T1
+
+pass T2 or head into run
+head points to T3
+if (bursttime > quantum) then 
+ending connects to T2
+connect T2 to null 
+T2bursttime = 1
+end 
+
+
+T1-T2
+
+
+pass T1 into run for the specified burstime ( 1 second)
+we know bursttime < quantum
+T1 --> null
+head points to T2
+
+
+T2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
