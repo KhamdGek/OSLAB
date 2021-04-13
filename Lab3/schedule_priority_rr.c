@@ -84,21 +84,14 @@ if (head == NULL) {
 		  
 	  }  
 	  
-	  }	  
-	   
-      
-	  
+	  }	   
 	  else if (new -> task -> priority == current -> next -> task -> priority) {
 	   current = current -> next ;
 	   
-	   if (current->next == NULL) {
-	  
-	    
+	   if (current->next == NULL) {    
        new->next = NULL;
 	   
-	   }
-	   
-	   
+	   }  
 	   else if (new-> task-> priority == current->next->task->priority) {
 		   
 		current = current -> next ;   
@@ -117,9 +110,7 @@ if (head == NULL) {
 	   current = head;		    
 		break;  
 	  }  
-	  
-	  
-	  
+	  	  
 	  // if the new priority is less than the current priority
 	  else if ((new -> task -> priority) <(current -> next -> task -> priority)) {
 	  current = current -> next;
@@ -130,21 +121,9 @@ if (head == NULL) {
 	  new->next = NULL;
 	  current = head;
 	  break;
-
-	  
 	  }	  
-	  
-	   
-      }	  
-	   	  
-		  
-		  
-		  
-	  }
-
-
-
-	  
+      }	  	    
+	  } 
     }
   }
  
