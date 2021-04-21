@@ -47,3 +47,7 @@ In order to get output run following command
 
 `./7.17_task_Usman_Ilamdin`
 ![](images/7_17.JPG)
+
+
+## Task:4(7.15)
+### This task is in complete and have 2 to 3 bugs.
