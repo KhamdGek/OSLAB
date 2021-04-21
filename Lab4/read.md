@@ -1,3 +1,0 @@
-# Lab Assignment 4
-
-

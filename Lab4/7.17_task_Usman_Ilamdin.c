@@ -1,4 +1,4 @@
-/* Arslan_Shafique_2017-EE-118*/
+/* Usman IlamDin --------2017-EE-119*/
 /*Task_7.17 */
 #include <pthread.h>
 #include <stdio.h>
