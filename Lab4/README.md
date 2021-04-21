@@ -20,6 +20,7 @@ In order to get output run following command
 `gcc Task_4.24_2017-EE-118.c -o Task_4.24_2017-EE-118 -lpthread -lm` 
 
 `./Task_4.24_2017-EE-118`
+
 ![](images/4_24.PNG)
 
 ## Task:2(4.27)
