@@ -48,3 +48,12 @@ completed using Pthreds and POSIX synchronization.
 
 *Result*
 
+## References
+'https://www.geeksforgeeks.org/thread-pools-java/'
+
+'https://en.wikipedia.org/wiki/Thread_pool'
+
+'https://github.com/xalstnx/3_1-operating-system-project2'
+
+
+
