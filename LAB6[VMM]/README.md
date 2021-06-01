@@ -1,15 +1,15 @@
 ## Designing a Virtual Memory Manager
 
-![](images/in1.jpeg)
+![](images/In1.jpeg)
 *Page-1*
 
-![](images/in2.jpeg)
+![](images/In2.jpeg)
 *Page-2*
 
-![](images/in3.jpeg)
+![](images/In3.jpeg)
 *Page-3*
 
-![](images/in4.jpeg)
+![](images/In4.jpeg)
 *Page-4*
 
 
