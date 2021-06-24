@@ -12,13 +12,9 @@ int simplefs_create(char *filename){
 		if(strcmp(inode->name, filename) == 0)
 			return -1;
 	}
-	
 	int inode_num = simplefs_allocInode();
 	if(inode_num == -1)
 		return -1;
-
-
-	// create this inode
     
     memcpy(inode->name, filename, sizeof(filename));
 
@@ -34,41 +30,6 @@ int simplefs_create(char *filename){
 
 }
 
-
-void simplefs_delete(char *filename){
-    /*
-	    delete file with name `filename` from disk
-	*/
-	int inode_num = -1;
-	struct inode_t *inode = (struct inode_t *)malloc(sizeof(struct inode_t));
-	//check if same filename exists return -1
-	for(int i = 0; i < NUM_INODES; ++i)
-	{
-		simplefs_readInode(i, inode);
-		if(strcmp(inode->name, filename) == 0)
-		{
-			inode_num = i;
-			break;
-		}
-	}
-
-	if(inode_num == -1)
-	{	
-		return;			// not exist
-	}
-
-	for(int i=0; i<MAX_FILE_SIZE; i++)
-	{
-		if(inode->direct_blocks[i] != -1)
-		{
-			simplefs_freeDataBlock(inode->direct_blocks[i]);
-		}
-	}
-
-	simplefs_freeInode(inode_num);
-	free(inode);
-
-}
 
 int simplefs_open(char *filename){
     /*
@@ -120,6 +81,42 @@ void simplefs_close(int file_handle){
 
 
 }
+
+void simplefs_delete(char *filename){
+    /*
+	    delete file with name `filename` from disk
+	*/
+	int inode_num = -1;
+	struct inode_t *inode = (struct inode_t *)malloc(sizeof(struct inode_t));
+	//check if same filename exists return -1
+	for(int i = 0; i < NUM_INODES; ++i)
+	{
+		simplefs_readInode(i, inode);
+		if(strcmp(inode->name, filename) == 0)
+		{
+			inode_num = i;
+			break;
+		}
+	}
+
+	if(inode_num == -1)
+	{	
+		return;			
+	}
+
+	for(int i=0; i<MAX_FILE_SIZE; i++)
+	{
+		if(inode->direct_blocks[i] != -1)
+		{
+			simplefs_freeDataBlock(inode->direct_blocks[i]);
+		}
+	}
+
+	simplefs_freeInode(inode_num);
+	free(inode);
+
+}
+
 
 int simplefs_seek(int file_handle, int nseek){
     /*
