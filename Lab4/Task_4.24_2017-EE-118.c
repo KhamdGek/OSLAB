@@ -39,7 +39,7 @@ int main (int argc, const char * argv[]) {
     Pi = 4.0 * circle_count / NUMBER_OF_POINTS;
     clock_t end = clock();
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-    printf("NUMBER OF POINT = %d\n",NUMBER_OF_POINTS);
+    printf("NUMBER OF POINTS = %d\n",NUMBER_OF_POINTS);
     printf("Pi = %f\n",Pi);
     printf("time = %f\n",time_spent);
     return 0;
