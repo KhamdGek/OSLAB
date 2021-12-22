@@ -16,7 +16,7 @@ void simplefs_readSuperBlock(struct superblock_t *superblock){
 
 void simplefs_writeSuperBlock(struct superblock_t *superblock){
     /*
-	    Helper function to write superblock from superblock_t structure to disk
+	    Helper function to superblock from superblock_t structure to disk
 	*/
     char tempBuf[BLOCKSIZE];
     memcpy(tempBuf, superblock, sizeof(struct superblock_t));
