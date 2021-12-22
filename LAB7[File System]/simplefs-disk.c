@@ -185,7 +185,7 @@ void simplefs_dump(){
 	    Prints Disk state information   
 	*/
 
-    printf("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<DISK STATE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
+    printf("\n");
     struct superblock_t *superblock = (struct superblock_t *)malloc(sizeof(struct superblock_t));
     simplefs_readSuperBlock(superblock);
     char buf[MAX_NAME_STRLEN + 1];
